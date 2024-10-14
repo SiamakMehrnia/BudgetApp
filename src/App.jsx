@@ -1,9 +1,9 @@
-import { AppProvider } from "../context/AppContext.jsx";
-import Budget from "../components/Budget.jsx";
-import ExpenseTotal from "../components/ExpenseTotal.jsx";
-import ExpenseList from "../components/ExpenseList.jsx";
-import AddExpenseForm from "../components/AddExpenseForm";
-import RemainingBudget from "../components/Remaining.jsx";
+import { AppProvider } from "./context/AppContext.jsx";
+import Budget from "./components/Budget.jsx";
+import ExpenseTotal from "./components/ExpenseTotal.jsx";
+import ExpenseList from "./components/ExpenseList.jsx";
+import AddExpenseForm from "./components/AddExpenseForm.jsx";
+import RemainingBudget from "./components/Remaining.jsx";
 
 const App = () => {
   return (
@@ -12,14 +12,14 @@ const App = () => {
         <header>
           <h1 className="text-[3.2rem] font-bold">My Budget Planner</h1>
         </header>
-        <div className="flex mt-[3rem] gap-[2rem]">
-          <div className="w-[20%] card bg-[#BBC7A4] text-[1.6rem] text-[#100E1B] p-[2rem]">
+        <div className="w-full flex items-start flex-col gap-[2rem] mx-auto lg:flex-row mt-[3rem] lg:items-center lg:gap-[5.5rem]">
+          <div className="w-[70%] lg:w-[20%] card bg-[#171528] text-[1.6rem] text-white border-2 border-white p-[2rem]">
             <Budget />
           </div>
-          <div className="card bg-[#D6DBD2] text-[1.6rem]  text-[#100E1B] p-[2rem]">
+          <div className="w-[70%] lg:w-[20%] text-center card bg-[#272343] text-[1.6rem]  text-white border-2 border-white p-[2rem]">
             <RemainingBudget />
           </div>
-          <div className="card bg-[#F2F5EA] text-[1.6rem]  text-[#100E1B] p-[2rem]">
+          <div className="w-[70%] lg:w-[20%] text-center card bg-[#37315E] text-[1.6rem]  text-white border-2 border-white p-[2rem]">
             <ExpenseTotal />
           </div>
         </div>
@@ -29,8 +29,8 @@ const App = () => {
             <ExpenseList />
           </div>
         </div>
-        <h3 className="mt-3">Add Expense</h3>
-        <div className="row mt-3">
+        <div className="my-[3rem]">
+          <h3 className="text-[1.8rem]">Add Expense</h3>
           <div className="col-sm">
             <AddExpenseForm />
           </div>

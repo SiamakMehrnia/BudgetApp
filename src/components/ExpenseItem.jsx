@@ -13,10 +13,10 @@ const ExpenseItem = (props) => {
   };
 
   return (
-    <li className="list-group-item d-flex justify-content-between align-items-center">
+    <li className="text-[1.4rem] text-[#100E1B] flex justify-between border-b-2 py-[1rem]">
       {props.name}
-      <div>
-        <span className="badge badge-primary badge-pill mr-3">
+      <div className="flex items-center">
+        <span className="badge text-[1.2rem] badge-outline mr-3 p-[7px]">
           £{props.cost}
         </span>
         <TiDelete size="1.5em" onClick={handleDeleteExpense} />
